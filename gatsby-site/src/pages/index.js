@@ -6,6 +6,15 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      items: [],
+      isLoaded: false,
+    }
+  }
+
   <Layout>
     <SEO title="Home" />
     <h1>Hi people</h1>
@@ -14,7 +23,11 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <ul>
+    <li><Link to="/page-2/">Go to page 2</Link></li>
+    <li><Link to="/page-3/">Go to page 3</Link></li>
+    <li><Link to="/page-4/">Go to page 4</Link></li>
+    </ul>
   </Layout>
 )
 
